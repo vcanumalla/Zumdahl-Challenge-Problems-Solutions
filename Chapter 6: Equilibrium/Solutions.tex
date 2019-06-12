@@ -1,14 +1,72 @@
-\documentclass{article}
+\documentclass[11 pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\renewcommand{\theequation}{\alph{equation}}
+\usepackage[pdftex]{graphicx}
+\usepackage[shortlabels]{enumitem}
+\usepackage[inline]{asymptote}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+\usepackage[english]{babel}
+\usepackage[margin = 1.5 in]{geometry}
+\usepackage[nottoc]{tocbibind}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{csquotes}
+\usepackage[final]{pdfpages}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage{empheq}
+\usepackage{import}
+\usepackage{transparent}
+\usepackage{xifthen}
+\usepackage{mdframed}
 
+\setlength{\tabcolsep}{12pt}
+\newcommand{\icetable}[9]{
+    \begin{tabular}{cc@{}c@{}c@{}c@{}c@{}c}
+
+    & &   [\ce{#2#1}]& ${}+{}$ & [\ce{#4#3}] & \ce{<=>}& [\ce{#6#5}]\\
+ 
+  I & &       #7    &&   #8                      &&  #9    \\
+  C & &       $- #2x$    &&   $- #4x$                         &&  $+ #6x$    \\
+  E & &       $(#7 - #2x)$    &&   $(#8 - #4x)$                         &&  $(#9 + #6x)$    \\
+ 
+\end{tabular}
+
+}
 \title{Zumdahl Challenge Problems Solutions}
-\author{chickenbutt4000vc }
-\date{June 2019}
+\author{Vishal Canumalla}
 
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
+\section*{6.73} 
+
+\textbf{Problem:} Nitric oxide and bromine at initial pressures of 98.4 and 41.3 torr, respectively, were allowed to react at 300. K. At equilibrium the total pressure was 110.5 torr. The reaction is as follows.
+$$\ce{2NO + Br2 <=> 2NOBr}$$
+\begin{enumerate}[a)]
+    \item Calculate the value of $K_p$
+    \item What would be the partial pressures of all species if
+NO and \ce{Br2}, both at an initial partial pressure of
+0.30 atm, were allowed to come to equilibrium at
+this temperature?
+\end{enumerate}
+\textbf{Solution:} We model the change in pressure of each substance through an ICE table and note the concentrations.
+\begin{center}
+ \icetable{NO}{2}{Br2}{}{NOBr}{2}{98.4}{41.3}{}
+\end{center}
+We are told that $P_{E}$ = 110.5 torr, meaning that we can solve for $x$
+\begin{align*}
+P_E &= P_{\ce{NO}} + P_{\ce{Br2}} + P_{\ce{NOBr}} \\
+    110.5 &= (98.4 - 2x) + (41.3 - x) + (2x) \\
+    x &= 29.2 \text{ torr}
+\end{align*}
+Solving for each equilibrium concentration gives us a $K_p$ value of 
+$$K_p = \frac{58.4^2}{40.0^2 \times 12.1} = 0.176 \text{ torr} = \boxed{137 \text{ atm}^{-1}}$$
+
+
 
 \end{document}
