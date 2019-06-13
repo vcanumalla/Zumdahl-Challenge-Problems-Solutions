@@ -1,7 +1,7 @@
 \documentclass[11 pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm}
-\renewcommand{\theequation}{\alph{equation}}
+
 \usepackage[pdftex]{graphicx}
 \usepackage[shortlabels]{enumitem}
 \usepackage[inline]{asymptote}
@@ -36,7 +36,7 @@
 \end{tabular}
 
 }
-\title{Zumdahl Challenge Problems Solutions}
+\title{Chapter 6 Challenge Problem Solutions}
 \author{Vishal Canumalla}
 
 \begin{document}
@@ -70,12 +70,34 @@ Solving for the second part of the problem becomes a bit more convoluted. We are
 0.3 atm each. Writing an ICE table for the following reaction is trivial and is omitted. We end with a $K_p$ of 
 $$134 =  \frac{(2x)^2}{(0.3-3x)^2(0.3-x)}$$
 Solving for x is complicated to do algebraically, but graphically, we see that $x = 0.125$ atm. Knowing
-that the equilibrium concentrations of \ce{NO} and \ce{Br2} are $0.3 - 2x$ and $0.3 - x$, and 
+that the equilibrium concentrations of \ce{NO} and \ce{Br2} are $(0.3 - 2x)$ and $(0.3 - x)$, and 
 \ce{NOBr} is $2x$, we see that the partial pressures of each of the substances are
 \begin{align*}
     P_{\ce{NO}} &= 0.052 \text{atm} \\
     P_{\ce{Br2}} &= 0.18 \text{atm} \\
     P_{\ce{NOBr}} &= 0.25 \text{atm}  
 \end{align*}
-\section{6.}
+\section*{6.99}
+\textbf{Problem:} Consider the reaction $$\ce{P4(g) <=> 2P2(g)}$$ where $K_p = 1.00 \times 10^{-1}$ at \SI{1325}{\kelvin}.
+In an experiment where \ce{P4(g)} was placed in a container at 1325 K,  the equilibrium mixture of \ce{P4(g)} and \ce{P2(g)}
+has a total pressure of 1.00 atm. Calculate the equilibrium pressures of \ce{P4(g)} and \ce{P2(g)}. Calculate the fraction (by mole) of \ce{P4(g)}
+that has dissociated to reach equilibrium. \\
+
+\textbf{Solution:} In this problem, we have a few unknowns, including the original 
+pressure of \ce{P4(g)} and of course the equilibrium pressures of \ce{P4(g)} and \ce{P2(g)}.
+Our basic ICE table gives us two unknowns, the initial concentration of \ce{P4(g)} $y$, a
+and the change variable $x$. I have omitted the ICE table again for this problem, but writing it out
+would give us the equilibrium concentrations of the two substances in terms of $y$ and $x$. 
+\begin{align*}
+  \ce{P4(g)} &= y - x \\
+  \ce{P2(g)} &= 2x 
+\end{align*}
+The problem statement also gives us the total pressure as $P = 1.00$ atm, which we can rewrite to get our system of equations
+\begin{align}
+  K_p &= \frac{(2x)^2}{(y-x)} \\
+  P &= (y-x) + (2x)
+\end{align}
+Solving this system of equations is simply algebraic manipulation, which gives us
+$y = 0.865$ atm, and $x = 0.135$ atm. Finding our answers is simply arithmetic.
+
 \end{document}
