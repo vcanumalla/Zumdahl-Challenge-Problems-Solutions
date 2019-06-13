@@ -22,7 +22,7 @@
 \usepackage{transparent}
 \usepackage{xifthen}
 \usepackage{mdframed}
-
+\DeclareSIUnit\atm{atm}
 \setlength{\tabcolsep}{12pt}
 \newcommand{\icetable}[9]{
     \begin{tabular}{cc@{}c@{}c@{}c@{}c@{}c}
@@ -85,7 +85,7 @@ that has dissociated to reach equilibrium. \\
 
 \textbf{Solution:} In this problem, we have a few unknowns, including the original 
 pressure of \ce{P4(g)} and of course the equilibrium pressures of \ce{P4(g)} and \ce{P2(g)}.
-Our basic ICE table gives us two unknowns, the initial concentration of \ce{P4(g)} $y$, a
+Our basic ICE table gives us two unknowns, the initial concentration of \ce{P4(g)} $y$,
 and the change variable $x$. I have omitted the ICE table again for this problem, but writing it out
 would give us the equilibrium concentrations of the two substances in terms of $y$ and $x$. 
 \begin{align*}
@@ -98,6 +98,9 @@ The problem statement also gives us the total pressure as $P = 1.00$ atm, which 
   P &= (y-x) + (2x)
 \end{align}
 Solving this system of equations is simply algebraic manipulation, which gives us
-$y = 0.865$ atm, and $x = 0.135$ atm. Finding our answers is simply arithmetic.
+$y = \SI{0.865}{\atm}$, and $x = \SI{0.135}{\atm}$. Finding our answers is simply arithmetic.
+
+$$\boxed{  P_{\ce{NO}} = \SI{0.052}{\atm} \qquad P_{\ce{Br2}} = \SI{0.18}{\atm} \qquad P_{\ce{NOBr}} = \SI{0.25}{\atm}}$$
+
 
 \end{document}
