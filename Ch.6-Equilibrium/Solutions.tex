@@ -37,8 +37,8 @@
 
 
 }
-\newmdenv[linewidth=1.5pt]{boxBool}
-\newmdenv[linewidth = 1 pt]{answer}
+\newmdenv[linewidth=1.5pt]{problemBox}
+\newmdenv[linewidth = 1 pt]{answerBox}
 \title{Chapter 6 Challenge Problem Solutions}
 \author{Vishal Canumalla}
 
@@ -47,7 +47,7 @@
 \maketitle
 
 \section*{6.97} 
-\begin{boxBool}
+\begin{problemBox}
   
 
 \textbf{Problem:} Nitric oxide and bromine at initial pressures of 98.4 and 41.3 torr, respectively, were allowed to react at 300. K. At equilibrium the total pressure was 110.5 torr. The reaction is as follows.
@@ -59,7 +59,7 @@ NO and \ce{Br2}, both at an initial partial pressure of
 0.30 atm, were allowed to come to equilibrium at
 this temperature?
 \end{enumerate}
-\end{boxBool}
+\end{problemBox}
 \textbf{Solution:} We model the change in pressure of each substance through an ICE table and note the concentrations.
 \begin{center}
  \icetable{NO}{2}{Br2}{}{NOBr}{2}{98.4}{41.3}{}
@@ -78,15 +78,16 @@ $$134 =  \frac{(2x)^2}{(0.3-3x)^2(0.3-x)}$$
 Solving for $x$ is complicated to do algebraically, but graphically, we see that $x = 0.125$ atm. Knowing
 that the equilibrium concentrations of \ce{NO} and \ce{Br2} are $(0.3 - 2x)$ and $(0.3 - x)$, and 
 \ce{NOBr} is $2x$, we see that the partial pressures of each of the substances are
-\begin{answer}
+\begin{answerBox}
   $$ P_{\ce{NO}} = \SI{0.052}{\atm} \qquad P_{\ce{Br2}} = \SI{0.18}{\atm} \qquad P_{\ce{NOBr}} = \SI{0.25}{\atm}$$
-\end{answer}
+\end{answerBox}
 \section*{6.99}
+\begin{problemBox}
 \textbf{Problem:} Consider the reaction $$\ce{P4(g) <=> 2P2(g)}$$ where $K_p = 1.00 \times 10^{-1}$ at \SI{1325}{\kelvin}.
 In an experiment where \ce{P4(g)} was placed in a container at 1325 K,  the equilibrium mixture of \ce{P4(g)} and \ce{P2(g)}
 has a total pressure of 1.00 atm. Calculate the equilibrium pressures of \ce{P4(g)} and \ce{P2(g)}. Calculate the fraction (by mole) of \ce{P4(g)}
 that has dissociated to reach equilibrium. \\
-
+\end{problemBox}
 \textbf{Solution:} In this problem, we have a few unknowns, including the original 
 pressure of \ce{P4(g)} and of course the equilibrium pressures of \ce{P4(g)} and \ce{P2(g)}.
 Our basic ICE table gives us two unknowns, the initial concentration of \ce{P4(g)} $y$,
@@ -103,8 +104,26 @@ The problem statement also gives us the total pressure as $P = 1.00$ atm, which 
 \end{align}
 Solving this system of equations is simply algebraic manipulation, which gives us
 $y = \SI{0.865}{\atm}$, and $x = \SI{0.135}{\atm}$. Finding our answers is simply arithmetic.
-\begin{answer}
+\begin{answerBox}
   $$P_{\ce{P4}} = \SI{0.73}{\atm} \qquad P_{\ce{P2}} = \SI{0.270}{\atm} \qquad 16\% \text{ of \ce{P4} decomposed}$$
-\end{answer}
+\end{answerBox}
+\section*{6.101}
+\begin{problemBox}
+    \textbf{Problem:} Consider the reaction 
+    $$\ce{3O2(g) <=> 2O3(g)}$$
+    At $\SI{175}{\celsius}$ and a pressure of 128 torr an equilibrium mixture of \ce{O2} and \ce{O3} has a density of 0.168 g/L. Calculate  the $K_p$ 
+    for the above reaction at \SI{175}{\celsius}. 
+\end{problemBox}
+\textbf{Solution:} We first must come up with a method of finding density in terms of pressure. Density's units are \si{\gram\per\liter},
+and the equation that relates pressure and volume is $$PV = nRT$$ However, we must manipulate this equation
+to introduce mass. We do this by introducing molar mass ($M$) and obtain $$PM = M\frac{n}{V}RT = \rho{RT}$$
 
+ $$ \frac{PM}{RT} = \frac{P_{\ce{O2}}M_{\ce{O2}} + P_{\ce{O3}}M_{\ce{O3}}}{RT} = \rho = 0.168 $$
+
+We also know that $P = 128$ torr, or $\SI{.168}{\atm}$. Our second equation is $$P = P_{\ce{O2}} + P_{\ce{O3}} = 0.168$$
+This is a simple system of equations with two unknowns ($P_{\ce{O2}}$ and $P_{\ce{O3}}$). Once solved, we find that
+$P_{\ce{O2}} = \SI{0.118}{\atm}$ and $P_{\ce{O3}} = \SI{0.05}{\atm}$. Which gives us a final answer
+\begin{answerBox}
+$$K_p = \frac{{P_{\ce{O3}}}^2}{{P_{\ce{O2}}}^3} = \SI{1.5}{\per\atm}$$
+\end{answerBox}
 \end{document}
