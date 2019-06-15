@@ -33,9 +33,12 @@
   C & &       $- #2x$    &&   $- #4x$                         &&  $+ #6x$    \\
   E & &       $(#7 - #2x)$    &&   $(#8 - #4x)$                         &&  $(#9 + #6x)$    \\
  
-\end{tabular}
+    \end{tabular}
+
 
 }
+\newmdenv[linewidth=1.5pt]{boxBool}
+\newmdenv[linewidth = 1 pt]{answer}
 \title{Chapter 6 Challenge Problem Solutions}
 \author{Vishal Canumalla}
 
@@ -44,6 +47,8 @@
 \maketitle
 
 \section*{6.97} 
+\begin{boxBool}
+  
 
 \textbf{Problem:} Nitric oxide and bromine at initial pressures of 98.4 and 41.3 torr, respectively, were allowed to react at 300. K. At equilibrium the total pressure was 110.5 torr. The reaction is as follows.
 $$\ce{2NO + Br2 <=> 2NOBr}$$
@@ -54,6 +59,7 @@ NO and \ce{Br2}, both at an initial partial pressure of
 0.30 atm, were allowed to come to equilibrium at
 this temperature?
 \end{enumerate}
+\end{boxBool}
 \textbf{Solution:} We model the change in pressure of each substance through an ICE table and note the concentrations.
 \begin{center}
  \icetable{NO}{2}{Br2}{}{NOBr}{2}{98.4}{41.3}{}
@@ -65,18 +71,16 @@ P_E &= P_{\ce{NO}} + P_{\ce{Br2}} + P_{\ce{NOBr}} \\
     x &= 29.2 \text{ torr}
 \end{align*}
 Solving for each equilibrium concentration gives us a $K_p$ value of 
-$$K_p = \frac{58.4^2}{40.0^2 \times 12.1} = 0.176 \text{ torr} = \boxed{137 \text{ atm}^{-1}}$$
+$$K_p = \frac{58.4^2}{40.0^2 \times 12.1} = 0.176 \text{ torr}^{-1} = \boxed{134 \text{ atm}^{-1}}$$
 Solving for the second part of the problem becomes a bit more convoluted. We are given that the initial concentrations of the reactants \ce{NO} and \ce{Br2} are 
 0.3 atm each. Writing an ICE table for the following reaction is trivial and is omitted. We end with a $K_p$ of 
 $$134 =  \frac{(2x)^2}{(0.3-3x)^2(0.3-x)}$$
-Solving for x is complicated to do algebraically, but graphically, we see that $x = 0.125$ atm. Knowing
+Solving for $x$ is complicated to do algebraically, but graphically, we see that $x = 0.125$ atm. Knowing
 that the equilibrium concentrations of \ce{NO} and \ce{Br2} are $(0.3 - 2x)$ and $(0.3 - x)$, and 
 \ce{NOBr} is $2x$, we see that the partial pressures of each of the substances are
-\begin{align*}
-    P_{\ce{NO}} &= 0.052 \text{atm} \\
-    P_{\ce{Br2}} &= 0.18 \text{atm} \\
-    P_{\ce{NOBr}} &= 0.25 \text{atm}  
-\end{align*}
+\begin{answer}
+  $$ P_{\ce{NO}} = \SI{0.052}{\atm} \qquad P_{\ce{Br2}} = \SI{0.18}{\atm} \qquad P_{\ce{NOBr}} = \SI{0.25}{\atm}$$
+\end{answer}
 \section*{6.99}
 \textbf{Problem:} Consider the reaction $$\ce{P4(g) <=> 2P2(g)}$$ where $K_p = 1.00 \times 10^{-1}$ at \SI{1325}{\kelvin}.
 In an experiment where \ce{P4(g)} was placed in a container at 1325 K,  the equilibrium mixture of \ce{P4(g)} and \ce{P2(g)}
@@ -99,8 +103,8 @@ The problem statement also gives us the total pressure as $P = 1.00$ atm, which 
 \end{align}
 Solving this system of equations is simply algebraic manipulation, which gives us
 $y = \SI{0.865}{\atm}$, and $x = \SI{0.135}{\atm}$. Finding our answers is simply arithmetic.
-
-$$\boxed{  P_{\ce{NO}} = \SI{0.052}{\atm} \qquad P_{\ce{Br2}} = \SI{0.18}{\atm} \qquad P_{\ce{NOBr}} = \SI{0.25}{\atm}}$$
-
+\begin{answer}
+  $$P_{\ce{P4}} = \SI{0.73}{\atm} \qquad P_{\ce{P2}} = \SI{0.270}{\atm} \qquad 16\% \text{ of \ce{P4} decomposed}$$
+\end{answer}
 
 \end{document}
