@@ -126,4 +126,31 @@ $P_{\ce{O2}} = \SI{0.118}{\atm}$ and $P_{\ce{O3}} = \SI{0.05}{\atm}$. Which give
 \begin{answerBox}
 $$K_p = \frac{{P_{\ce{O3}}}^2}{{P_{\ce{O2}}}^3} = \SI{1.5}{\per\atm}$$
 \end{answerBox}
+\newpage
+\section*{6.103}
+\begin{problemBox}
+    \textbf{Problem:} a \SI{4.72}{\gram} sample of methanol (\ce{CH3OH}) was placed in an otherwise empty \SI{1.00}{\liter} flask and heated to
+    \SI{250}{\celsius} to vaporize the methanol. Over time the methanol vapor decomposed by the following reaction:
+    $$\ce{CH3OH(g) <=> CO(g) + 2H2(g)}$$ After the system has reached equilibrium, a tiny hole is drilled in the side of the flask
+    allowing gaseous compounds to effuse out of the flask. Measurements of the effusing gas show that it contains
+    33.0 times as much \ce{H2(g)} as \ce{CH3OH(g)}. Calculate the $K$ for this reaction at \SI{250}{\celsius}. 
+\end{problemBox}
+\textbf{Solution:} We are given that the effusing gas shows 33 times as much \ce{H2} as \ce{CH3OH}. However, this
+does not account for the the differing rate of effusion for the two gasses. Using Graham's law of effusion gets us an
+effusion ratio of
+$\frac{\text{Rate}_{\ce{H2}}}{\text{Rate}_{\ce{CH3OH}}} = \sqrt{\frac{M_{\ce{CH3OH}}}{M_{\ce{H2}}}} = \sqrt{\frac{32}{2}} = 4$. \\ \\
+We now know that \ce{H2} effuses at 4 times the rate of \ce{CH3OH}, however, we are told that there is 33 times as much \ce{H2}. Since the effusion
+rate does not account for enough of an increase, the other $\frac{33}{4} = 8.25$ factor comes from the greater concentration of \ce{H2} at equilibrium.
+The mole ratio of \ce{H2} to \ce{CH3OH} is thus $$\frac{n_{\ce{H2}}}{n_{\ce{CH3OH}}} = 8.25 $$\\ \\
+We start with 4.72 grams of \ce{CH3OH}, or \SI{0.147}{\mole}. The ICE Table is trivial and is omitted. Once written however,
+we see at equilibrium 
+\begin{align*}
+  8.28 &= \frac{n_{\ce{H2}}}{n_{\ce{CH3OH}}} = \frac{2x}{0.147 - x} \\
+  x &= 0.118
+\end{align*}
+Note that because the reaction takes place in a 1 liter vessel, the number of moles of any substance is identical
+in number to the concentration. 
+\begin{answerBox}
+    $$K = \frac{4x^3}{0.147 - x} = 0.23$$
+\end{answerBox}
 \end{document}
