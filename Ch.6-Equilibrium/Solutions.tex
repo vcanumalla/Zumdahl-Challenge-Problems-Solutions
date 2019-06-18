@@ -1,0 +1,181 @@
+\documentclass[11 pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage[pdftex]{graphicx}
+\usepackage[shortlabels]{enumitem}
+\usepackage[inline]{asymptote}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+\usepackage[english]{babel}
+\usepackage[margin = 1.5 in]{geometry}
+\usepackage[nottoc]{tocbibind}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{csquotes}
+\usepackage[final]{pdfpages}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage{empheq}
+\usepackage{import}
+\usepackage{transparent}
+\usepackage{xifthen}
+\usepackage{mdframed}
+\DeclareSIUnit\atm{atm}
+\setlength{\tabcolsep}{12pt}
+\newcommand{\icetable}[9]{
+    \begin{tabular}{cc@{}c@{}c@{}c@{}c@{}c}
+
+    & &   [\ce{#2#1}]& ${}+{}$ & [\ce{#4#3}] & \ce{<=>}& [\ce{#6#5}]\\
+ 
+  I & &       #7    &&   #8                      &&  #9    \\
+  C & &       $- #2x$    &&   $- #4x$                         &&  $+ #6x$    \\
+  E & &       $(#7 - #2x)$    &&   $(#8 - #4x)$                         &&  $(#9 + #6x)$    \\
+ 
+    \end{tabular}
+
+
+}
+\newmdenv[linewidth=1.5pt]{problemBox}
+\newmdenv[linewidth = 1 pt]{answerBox}
+\title{Chapter 6 Challenge Problem Solutions}
+\author{Vishal Canumalla}
+
+\begin{document}
+    
+    \maketitle
+    
+    \section*{6.97} 
+    \begin{problemBox}
+        \textbf{Problem:} Nitric oxide and bromine at initial pressures of 98.4 and 41.3 torr, respectively, were allowed to react at 300. K. At equilibrium the total pressure was 110.5 torr. The reaction is as follows.
+        $$\ce{2NO + Br2 <=> 2NOBr}$$
+        \begin{enumerate}[a)]
+                \item Calculate the value of $K_p$
+                \item What would be the partial pressures of all species if
+            NO and \ce{Br2}, both at an initial partial pressure of
+            0.30 atm, were allowed to come to equilibrium at
+            this temperature?
+        \end{enumerate}
+    \end{problemBox}
+    \textbf{Solution:} We model the change in pressure of each substance through an ICE table and note the concentrations.
+    \begin{center}
+         \icetable{NO}{2}{Br2}{}{NOBr}{2}{98.4}{41.3}{}
+    \end{center}
+    We are told that $P_{E}$ = 110.5 torr, meaning that we can solve for $x$
+    \begin{align*}
+            P_E &= P_{\ce{NO}} + P_{\ce{Br2}} + P_{\ce{NOBr}} \\
+                110.5 &= (98.4 - 2x) + (41.3 - x) + (2x) \\
+                x &= 29.2 \text{ torr}
+    \end{align*}
+    Solving for each equilibrium concentration gives us a $K_p$ value of 
+    \begin{answerBox}
+          $$K_p = \frac{58.4^2}{40.0^2 \times 12.1} = 0.176 \text{ torr}^{-1} = 134 \text{ atm}^{-1}$$
+    \end{answerBox}
+    Solving for the second part of the problem becomes a bit more convoluted. We are given that the initial concentrations of the reactants \ce{NO} and \ce{Br2} are 
+    0.3 atm each. Writing an ICE table for the following reaction is trivial and is omitted. We end with a $K_p$ of 
+    $$134 =  \frac{(2x)^2}{(0.3-3x)^2(0.3-x)}$$
+    Solving for $x$ is complicated to do algebraically, but graphically, we see that $x = 0.125$ atm. Knowing
+    that the equilibrium concentrations of \ce{NO} and \ce{Br2} are $(0.3 - 2x)$ and $(0.3 - x)$, and 
+    \ce{NOBr} is $2x$, we see that the partial pressures of each of the substances are
+    \begin{answerBox}
+      $$ P_{\ce{NO}} = \SI{0.052}{\atm} \qquad P_{\ce{Br2}} = \SI{0.18}{\atm} \qquad P_{\ce{NOBr}} = \SI{0.25}{\atm}$$
+    \end{answerBox}
+    \section*{6.99}
+    \begin{problemBox}
+    \textbf{Problem:} Consider the reaction $$\ce{P4(g) <=> 2P2(g)}$$ where $K_p = 1.00 \times 10^{-1}$ at \SI{1325}{\kelvin}.
+    In an experiment where \ce{P4(g)} was placed in a container at 1325 K,  the equilibrium mixture of \ce{P4(g)} and \ce{P2(g)}
+    has a total pressure of 1.00 atm. Calculate the equilibrium pressures of \ce{P4(g)} and \ce{P2(g)}. Calculate the fraction (by mole) of \ce{P4(g)}
+    that has dissociated to reach equilibrium. \\
+    \end{problemBox}
+    \textbf{Solution:} In this problem, we have a few unknowns, including the original 
+    pressure of \ce{P4(g)} and of course the equilibrium pressures of \ce{P4(g)} and \ce{P2(g)}.
+    Our basic ICE table gives us two unknowns, the initial concentration of \ce{P4(g)} $y$,
+    and the change variable $x$. I have omitted the ICE table again for this problem, but writing it out
+    would give us the equilibrium concentrations of the two substances in terms of $y$ and $x$. 
+    \begin{align*}
+      \ce{P4(g)} &= y - x \\
+      \ce{P2(g)} &= 2x 
+    \end{align*}
+    The problem statement also gives us the total pressure as $P = 1.00$ atm, which we can rewrite to get our system of equations
+    \begin{align*}
+      K_p &= \frac{(2x)^2}{(y-x)} \\
+      P &= (y-x) + (2x)
+    \end{align*}
+    Solving this system of equations is simply algebraic manipulation, which gives us
+    $y = \SI{0.865}{\atm}$, and $x = \SI{0.135}{\atm}$. Finding our answers is simply arithmetic.
+    \begin{answerBox}
+      $$P_{\ce{P4}} = \SI{0.73}{\atm} \qquad P_{\ce{P2}} = \SI{0.270}{\atm} \qquad 16\% \text{ of \ce{P4} decomposed}$$
+    \end{answerBox}
+    \section*{6.101}
+    \begin{problemBox}
+        \textbf{Problem:} Consider the reaction 
+        $$\ce{3O2(g) <=> 2O3(g)}$$
+        At $\SI{175}{\celsius}$ and a pressure of 128 torr an equilibrium mixture of \ce{O2} and \ce{O3} has a density of 0.168 g/L. Calculate  the $K_p$ 
+        for the above reaction at \SI{175}{\celsius}. 
+    \end{problemBox}
+    \textbf{Solution:} We first must come up with a method of finding density in terms of pressure. Density's units are \si{\gram\per\liter},
+    and the equation that relates pressure and volume is $$PV = nRT$$ However, we must manipulate this equation
+    to introduce mass. We do this by introducing molar mass ($M$) and obtain $$PM = M\frac{n}{V}RT = \rho{RT}$$
+    
+     $$ \frac{PM}{RT} = \frac{P_{\ce{O2}}M_{\ce{O2}} + P_{\ce{O3}}M_{\ce{O3}}}{RT} = \rho = 0.168 $$
+    
+    We also know that $P = 128$ torr, or $\SI{.168}{\atm}$. Our second equation is $$P = P_{\ce{O2}} + P_{\ce{O3}} = 0.168$$
+    This is a simple system of equations with two unknowns ($P_{\ce{O2}}$ and $P_{\ce{O3}}$). Once solved, we find that
+    $P_{\ce{O2}} = \SI{0.118}{\atm}$ and $P_{\ce{O3}} = \SI{0.05}{\atm}$. Which gives us a final answer
+    \begin{answerBox}
+    $$K_p = \frac{{P_{\ce{O3}}}^2}{{P_{\ce{O2}}}^3} = \SI{1.5}{\per\atm}$$
+    \end{answerBox}
+    \newpage
+    \section*{6.103}
+    \begin{problemBox}
+        \textbf{Problem:} a \SI{4.72}{\gram} sample of methanol (\ce{CH3OH}) was placed in an otherwise empty \SI{1.00}{\liter} flask and heated to
+        \SI{250}{\celsius} to vaporize the methanol. Over time the methanol vapor decomposed by the following reaction:
+        $$\ce{CH3OH(g) <=> CO(g) + 2H2(g)}$$ After the system has reached equilibrium, a tiny hole is drilled in the side of the flask
+        allowing gaseous compounds to effuse out of the flask. Measurements of the effusing gas show that it contains
+        33.0 times as much \ce{H2(g)} as \ce{CH3OH(g)}. Calculate the $K$ for this reaction at \SI{250}{\celsius}. 
+    \end{problemBox}
+    \textbf{Solution:} We are given that the effusing gas shows 33 times as much \ce{H2} as \ce{CH3OH}. However, this
+    does not account for the the differing rate of effusion for the two gasses. Using Graham's law of effusion gets us an
+    effusion ratio of
+    $\frac{\text{Rate}_{\ce{H2}}}{\text{Rate}_{\ce{CH3OH}}} = \sqrt{\frac{M_{\ce{CH3OH}}}{M_{\ce{H2}}}} = \sqrt{\frac{32}{2}} = 4$. \\ \\
+    We now know that \ce{H2} effuses at 4 times the rate of \ce{CH3OH}, however, we are told that there is 33 times as much \ce{H2}. Since the effusion
+    rate does not account for enough of an increase, the other $\frac{33}{4} = 8.25$ factor comes from the greater concentration of \ce{H2} at equilibrium.
+    The mole ratio of \ce{H2} to \ce{CH3OH} is thus $$\frac{n_{\ce{H2}}}{n_{\ce{CH3OH}}} = 8.25 $$\\ \\
+    We start with 4.72 grams of \ce{CH3OH}, or \SI{0.147}{\mole}. The ICE Table is trivial and is omitted. Once written however,
+    we see at equilibrium 
+    \begin{align*}
+      8.28 &= \frac{n_{\ce{H2}}}{n_{\ce{CH3OH}}} = \frac{2x}{0.147 - x} \\
+      x &= 0.118
+    \end{align*}
+    Note that because the reaction takes place in a 1 liter vessel, the number of moles of any substance is identical
+    in number to the concentration. 
+    \begin{answerBox}
+        $$K = \frac{4x^3}{0.147 - x} = 0.23$$
+    \end{answerBox}
+    \newpage
+    \newpage
+    \section*{6.105}
+    \begin{problemBox}
+        at \SI{207}{\celsius}, $K_p$ = \SI{0.267}{\atm} for the reaction
+        $$\ce{PCl5(g) <=> PCl3(g) + Cl2(g)}$$
+        \begin{enumerate}[a)]
+            \item If \SI{0.100}{\mole} of \ce{PCl5(g)} is placed in an otherwise empty \SI{12.0}{\liter} vessel at \SI{207}{\celsius}, calculate the partial pressures of \ce{PCl5(g)}, \ce{PCl3(g)}, and \ce{Cl2(g)} at equilibrium.
+            \item In another experiment the total pressure of an equilibrium mixture is \SI{2.00}{\atm{}} at \SI{207}{\celsius}. What mass of \ce{PCl5} was introduced into a \SI{5.00}{\liter} vessel to reach this equilibrium position?
+        \end{enumerate} 
+    \end{problemBox}
+    \textbf{Solution:} We are given moles of \ce{PCl5}, when we need partial pressure to use it in $K_p$. We use the ideal gas equation to find partial pressure
+    \begin{align*}
+        PV &= nRT \\
+        P(12) &= 0.1(0.0821)(480) \\
+        P_{\ce{PCl5}} &= \SI{0.3284}{\atm{}}
+    \end{align*}
+    The ICE table is trivial and omitted, but gives us a $K_p$ expression of 
+    $$K_p = \frac{x^2}{0.3284 - x} 0.267$$
+    Solving this quadratic, we get $x = 0.191$, and the partial pressures at equilibrium are thus
+    \begin{answerBox}
+    \begin{align*}
+        P_{\ce{PCl5}} = 0.1374 && P_{\ce{PCl3}} = 0.191 && P_{\ce{Cl2}} = 0.191
+    \end{align*}
+    \end{answerBox}
+\end{document}
