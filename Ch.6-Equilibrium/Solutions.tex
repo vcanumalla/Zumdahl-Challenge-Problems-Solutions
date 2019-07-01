@@ -178,4 +178,17 @@
         P_{\ce{PCl5}} = 0.1374 && P_{\ce{PCl3}} = 0.191 && P_{\ce{Cl2}} = 0.191
     \end{align*}
     \end{answerBox}
+    For part b, we are asked to solve for the initial concentration of \ce{PCl5}. However, we are given neither
+    the equilibrium concentration of \ce{PCl5} nor the value of the change variable $x$. It is evident
+    that we will thus have to use a system of equations. Writing an ICE table and representing the initial
+    concentration of \ce{PCl5} with the variable $y$ and the change variable as $x$, we obtain a $K_P$ expression of
+    $$ K_P = \frac{P_{\ce{Cl2}} \cdot P_{\ce{PCl3}}}{P_{\ce{PCl5}}}$$
+    We have two unknowns $x$ and $y$ and thus need a second equation to solve this system. This comes from
+    the value for $P_{tot}$ at equilibrium, \SI{2.00}{\atm{}}. Our system of equations is thus
+\begin{align*}
+  0.267 &= \frac{x^2}{y-x} \\
+  2.00 &= P_{\ce{PCl5}} + P_{\ce{PCl3}} + P_{\ce{Cl2}}= (y-x) + x + x 
+\end{align*}
+Solving this system of equations gets us an initial pressure of \SI{1.49}{\atm{}} for \ce{PCL5}, and converting to moles
+using $PV = nRT$ gives us a mass of \boxed{\SI{39.4}{\gram} \ce{PCl5}} introduced. 
 \end{document}
