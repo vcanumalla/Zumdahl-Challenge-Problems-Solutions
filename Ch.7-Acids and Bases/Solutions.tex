@@ -1,0 +1,59 @@
+\documentclass[11 pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage[pdftex]{graphicx}
+\usepackage[shortlabels]{enumitem}
+\usepackage[inline]{asymptote}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+\usepackage[english]{babel}
+\usepackage[margin = 1.5 in]{geometry}
+\usepackage[nottoc]{tocbibind}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{csquotes}
+\usepackage[final]{pdfpages}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage{empheq}
+\usepackage{import}
+\usepackage{transparent}
+\usepackage{xifthen}
+\usepackage{mdframed}
+\DeclareSIUnit\atm{atm}
+\setlength{\tabcolsep}{12pt}
+\newcommand{\icetable}[9]{
+    \begin{tabular}{cc@{}c@{}c@{}c@{}c@{}c}
+
+    & &   [\ce{#2#1}]& ${}+{}$ & [\ce{#4#3}] & \ce{<=>}& [\ce{#6#5}]\\
+ 
+  I & &       #7    &&   #8                      &&  #9    \\
+  C & &       $- #2x$    &&   $- #4x$                         &&  $+ #6x$    \\
+  E & &       $(#7 - #2x)$    &&   $(#8 - #4x)$                         &&  $(#9 + #6x)$    \\
+ 
+    \end{tabular}
+
+
+}
+\newmdenv[linewidth=1.5pt]{problemBox}
+\newmdenv[linewidth = 1 pt]{answerBox}
+\title{Chapter 7 Challenge Problem Solutions}
+\author{Vishal Canumalla}
+\begin{document}
+    \maketitle
+
+    \section*{7.123}
+    \begin{problemBox}
+        \begin{enumerate}[a.]
+            \item The principal equilibrium in a solution of \ce{NaHCO3}
+            is $$\ce{HCO3-(aq) + HCO3-(aq) <=> H2CO3(aq) + CO3^2-(aq)}$$
+            Calculate the value of the equilibrium constant for this reaction.
+            \item At equilibrium, what is the relationship between [\ce{H2CO3}]
+            and [\ce{CO3^2-}]?
+            \item Using the equilibrium $$\ce{H2CO3(aq) <=> 2H+(aq) + CO3^2-(aq)}$$
+            and the result from part b, derive an expression for the pH of the solution in terms of $K_{a_1}$ and $K_{a_2}$
+        \end{enumerate}
+    \end{problemBox}
+\end{document}
