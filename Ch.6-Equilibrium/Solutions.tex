@@ -23,6 +23,7 @@
 \usepackage{xifthen}
 \usepackage{mdframed}
 \DeclareSIUnit\atm{atm}
+
 \setlength{\tabcolsep}{12pt}
 \newcommand{\icetable}[9]{
     \begin{tabular}{cc@{}c@{}c@{}c@{}c@{}c}
@@ -36,6 +37,12 @@
     \end{tabular}
 
 
+}
+\newcommand{\p}[1]{
+  P_{\ce{#1}}
+}
+\newcommand{\m}[1]{
+  M_{\ce{#1}}
 }
 \newmdenv[linewidth=1.5pt]{problemBox}
 \newmdenv[linewidth = 1 pt]{answerBox}
@@ -191,4 +198,48 @@
 \end{align*}
 Solving this system of equations gets us an initial pressure of \SI{1.49}{\atm{}} for \ce{PCL5}, and converting to moles
 using $PV = nRT$ gives us a mass of \boxed{\SI{39.4}{\gram} \ce{PCl5}} introduced. 
+    \section*{6.109}
+    \begin{problemBox}
+      An \SI{8.00}{\gram} sample of \ce{SO3} was palced in an evacuated container, where it decomposed at \SI{600}{\celsius} according to the following reaction:
+      $$\ce{SO3(g) <=> SO2(g) + \frac{1}{2}O2(g)}$$
+      At equilibrium the total pressure and the density of the gaseous mixture were \SI{1.80}{\atm} and \SI{1.60}{\gram\per\liter}, repsectively. Calculate $K_p$ for this reaction.
+    \end{problemBox}
+    \textbf{Solution:} This problem is rather similar to 6.101, with some extra complications. In order to solve, first we set up an ICE table.
+    \begin{center}
+      \begin{tabular}{c|c@{}c@{}c@{}c@{}c}
+        
+            &   \ce{SO3(g)}      & $\ce{<=>}$ & $\ce{SO2(g)}$ & $+$ & $\frac{1}{2}\ce{O2}$  \\
+        
+        I   &        $P_0$       &            &   0           &     &  0                    \\
+        C   &       $- x$        &            &   + $x$       &     &  + $\frac{1}{2}x$     \\
+        E   &       $P_0 - x$    &            &   $x$         &     &    $\frac{1}{2}x$     \\
+        
+      \end{tabular}
+      
+    \end{center}
+  This gives us our base $K_p$ expression
+  $$K_p = \frac{\p{SO2}{\p{O2}}^\frac{1}{2}}{\p{SO3}} = \frac{x \times (\frac{1}{2}x)^\frac{1}{2}}{\p{SO3} - x}$$
+  and our substances' partial pressures at equilibrium
+  \begin{align*}
+    \p{SO3} &= \p{0} - x \\
+    \p{SO2} &= x \\
+    \p{O2} &= \frac{1}{2}x
+  \end{align*}
+  This $K_p$ expression relates the partial pressures of the 3 substances at equilibrium, meaning we can write the total pressure (1.8 atm) in terms of $x$ and $P_0$
+  \begin{align*}
+    1.80 &= \p{SO3} + \p{SO2} + \p{O2} \\
+    1.80 &= (P_0 - x) + x + \frac{1}{2}x \\
+    1.80 &= P_0 + \frac{1}{2}x
+  \end{align*}
+  Finally, we must derive an expression relating $x$, $\p{0}$ and density $\rho$. This is rather similar to the process done in 6.101, thus the reader is encouraged to review 6.101 if they have trouble deriving any steps.
+  \begin{align*}
+    \rho &= \frac{PM}{RT} \\
+     \SI{1.6}{\gram\per\liter}   &= \frac{\p{SO3}\m{SO3} + \p{SO2}\m{SO2} + \p{O2}\m{O2}}{RT} \\
+     &= \frac{(\p{0} - x)\m{SO3} + x\m{SO2} + \frac{1}{2}x\m{O2}}{RT} \\
+     1.6 &= \frac{((1.80 - \frac{1}{2}x) - x)\m{SO3} + x\m{SO2} + \frac{1}{2}x\m{O2}}{RT}
+  \end{align*}
+  At this point, we can solve for $x$ through algebraic manipuluation, and obtain a vlaue of $x \approx  \SI{0.73}{\atm}$. This allows us to solve for $\p{0}$, and thereby the partial pressures of all substances. The final answer is thus 
+  \begin{answerBox}
+    $$K_p = 0.63$$
+  \end{answerBox}
 \end{document}
