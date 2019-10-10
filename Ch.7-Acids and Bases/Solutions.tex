@@ -56,4 +56,26 @@
             and the result from part b, derive an expression for the pH of the solution in terms of $K_{a_1}$ and $K_{a_2}$
         \end{enumerate}
     \end{problemBox}
+    \textbf{Solution:} This problem does not initially give information that is necessary
+    to solve the problem. These are the $K_{a1}$ and $K_{a2}$ values for \ce{H2CO3}, which are instead provided
+    in the appendices of the textbook. The values are as follows
+    \begin{align*}
+        K_{a1} &= 4.3 \times 10^{-7} && \ce{H2CO3 + H2O <=> HCO3- + H3O+}\\
+        K_{a2} &= 4.8 \times 10^{-11} && \ce{HCO3- + H2O <=> CO3^2- + H3O+}
+    \end{align*}
+    The equilibrium constant ($K_{eq}$) for the solution is
+    \begin{align*}
+        K_{eq} &= \frac{[\ce{H2CO3}][\ce{CO3^2-}]}{[\ce{HCO3-}]^2}
+    \end{align*}
+    In order to find $K_{eq}$, we must relate the $K_a$ values, which can be done by
+    seperating the $K_{eq}$ expression into seperate parts
+    \begin{align*}
+        K_{eq} &= \frac{[\ce{H2CO3}][\ce{CO3^2-}]}{[\ce{HCO3-}]^2} \\
+        K_{eq} &= \frac{[\ce{H2CO3}]}{[\ce{HCO3-}][\ce{H+}]} \times \frac{[\ce{CO3^2-}][\ce{H+}]}{[\ce{HCO3-}]} \\
+               &= \frac{1}{K_{a2}} \times K_{a2}
+    \end{align*}
+    Which yields a final answer of 
+    \begin{answerBox}
+        $$K_{eq} = 1.1 \times 10^{-4}$$
+    \end{answerBox}
 \end{document}
