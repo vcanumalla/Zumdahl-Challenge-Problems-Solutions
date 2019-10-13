@@ -65,9 +65,16 @@
             this temperature?
         \end{enumerate}
     \end{problemBox}
-    \textbf{Solution:} We model the change in pressure of each substance through an ICE table and note the concentrations.
+    \textbf{Solution:} We model the change in pressure of each substance through an ICE table and note the partial pressures.
     \begin{center}
-         \icetable{NO}{2}{Br2}{}{NOBr}{2}{98.4}{41.3}{}
+        \begin{tabular}{c|c@{}c@{}c@{}c@{}c}
+        
+          &   \ce{2NO(g)}      & $\ce{+}$ & $\ce{Br2(g)}$ & $\ce{<=>}$ & $2\ce{NOBr (g)}$  \\
+      
+      I   &        $98.4$       &            &   41.3               &     &                      \\
+      C   &       $- 2x$        &            &   + $x$              &     &  + $2x$     \\
+      E   &       $98.4 - x$    &            &   $41.3 - x$         &     &    $2x$     \\      
+        \end{tabular}
     \end{center}
     We are told that $P_{E}$ = 110.5 torr, meaning that we can solve for $x$
     \begin{align*}
@@ -136,7 +143,7 @@
     \newpage
     \section*{6.103}
     \begin{problemBox}
-        \textbf{Problem:} a \SI{4.72}{\gram} sample of methanol (\ce{CH3OH}) was placed in an otherwise empty \SI{1.00}{\liter} flask and heated to
+        \textbf{Problem:} A \SI{4.72}{\gram} sample of methanol (\ce{CH3OH}) was placed in an otherwise empty \SI{1.00}{\liter} flask and heated to
         \SI{250}{\celsius} to vaporize the methanol. Over time the methanol vapor decomposed by the following reaction:
         $$\ce{CH3OH(g) <=> CO(g) + 2H2(g)}$$ After the system has reached equilibrium, a tiny hole is drilled in the side of the flask
         allowing gaseous compounds to effuse out of the flask. Measurements of the effusing gas show that it contains
@@ -164,7 +171,7 @@
     \newpage
     \section*{6.105}
     \begin{problemBox}
-        at \SI{207}{\celsius}, $K_p$ = \SI{0.267}{\atm} for the reaction
+        \textbf{Problem:} At \SI{207}{\celsius}, $K_p$ = \SI{0.267}{\atm} for the reaction
         $$\ce{PCl5(g) <=> PCl3(g) + Cl2(g)}$$
         \begin{enumerate}[a)]
             \item If \SI{0.100}{\mole} of \ce{PCl5(g)} is placed in an otherwise empty \SI{12.0}{\liter} vessel at \SI{207}{\celsius}, calculate the partial pressures of \ce{PCl5(g)}, \ce{PCl3(g)}, and \ce{Cl2(g)} at equilibrium.
@@ -198,9 +205,17 @@
 \end{align*}
 Solving this system of equations gets us an initial pressure of \SI{1.49}{\atm{}} for \ce{PCL5}, and converting to moles
 using $PV = nRT$ gives us a mass of \boxed{\SI{39.4}{\gram} \ce{PCl5}} introduced. 
+\section*{6.107}
+\begin{problemBox}
+  \textbf{Problem:} At 1000K the \ce{N2(g)} and \ce{O2(g)} in air (78\% \ce{N2}, 21\% \ce{O2}, by moles) react to form a mixture of \ce{NO(g)} and \ce{NO2(g)}.
+  The values of the equilibrium constants are $1.5 \times 10^{-4}$ and $1.0 \times 10^{-5}$ atm$^{-1}$ for the formation of \ce{NO(g)} and \ce{NO2(g)}, respectively.
+  At what total pressure will the partial pressures of \ce{NO(g)} and \ce{NO2(g)} be equal in an equilibrium mixture of \ce{N2(g)}, \ce{O2(g)}, \ce{NO(g)} and \ce{NO2(g)}?
+\end{problemBox}
+\textbf{Solution:} One particular ratio we can keep constant in this problem is the ratio between \ce{N2} and \ce{O2}, the ratio always being 78:21. We can call the equilibrium pressure of \ce{O2} to be $\p{O2}$, and the equilibrium pressure of \ce{N2} is thus 
+ $$\p{N2} = (78/21)\p{O2} \approx 3.71\p{O2}$$
     \section*{6.109}
     \begin{problemBox}
-      An \SI{8.00}{\gram} sample of \ce{SO3} was palced in an evacuated container, where it decomposed at \SI{600}{\celsius} according to the following reaction:
+      \textbf{Problem:} An \SI{8.00}{\gram} sample of \ce{SO3} was palced in an evacuated container, where it decomposed at \SI{600}{\celsius} according to the following reaction:
       $$\ce{SO3(g) <=> SO2(g) + \frac{1}{2}O2(g)}$$
       At equilibrium the total pressure and the density of the gaseous mixture were \SI{1.80}{\atm} and \SI{1.60}{\gram\per\liter}, repsectively. Calculate $K_p$ for this reaction.
     \end{problemBox}
