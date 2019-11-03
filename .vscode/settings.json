@@ -2,5 +2,29 @@
     "latex-workshop.view.pdf.external.viewer.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
     "latex-workshop.view.pdf.external.viewer.args": [
         "%PDF%"
-    ]
+    ],
+    "files.exclude": {
+        "**/*.bcf": true,
+        "**/*.pre": true,
+        "**/*.run.xml": true,
+        "**/*.synctex.gz": true,
+        "**/*.log": true,
+        "**/*.pdf": true,
+        "**/*.aux": true,
+        "**/*.bbl": true,
+        "**/*.fls": true,
+        "**/*.blg": true,
+        "**/*.out": true,
+        "**/*.fdb_latexmk": true
+
+
+
+
+
+
+
+
+
+
+    }
 }
