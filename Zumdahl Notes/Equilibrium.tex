@@ -1,0 +1,67 @@
+\documentclass[9pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage[version =4]{mhchem}
+\usepackage[paperheight = 3in, paperwidth = 5in, margin = 0.20in, top = 0.6in]{geometry}
+\pagestyle{fancy}
+\usepackage{pgf}
+\usepackage{pgfpages}
+\setlength{\parindent}{0cm}
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=\pgfphysicalwidth,%
+    resized height=\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+\begin{document}
+
+
+
+% \cardfrontstyle[\large\slshape]{headings}
+% \cardbackstyle{empty}
+\begin{center}
+    \hspace{0pt}
+    \vfill
+    \Large Equilibrium \\
+    \large Extent of Chemical Reactions
+    \vfill
+    \hspace{0pt}
+\end{center}
+% \cardfrontfoot{Atomic Theory}
+\newpage
+
+At equilibrium, the rate of the forward reaction is equal to the rate of the reverse reaction. For a reaction such as 
+\begin{align*}
+  \ce{H3PO4 + H2O <=> H2PO4- + H3O+}
+\end{align*}
+The amount of product being formed is equal to the amount of reactant formed. This is represented by the sign \ce{<=>}. No change is observed
+because changes in one direction are balanced by changes in the other. The amount of product and reactant stay constant at this point.
+\newpage
+For any reaction in the form
+\begin{align*}
+  \ce{A <=> B}
+\end{align*}
+The rate law shows
+\begin{align*}
+  k_f[\ce{A}]^m = k_r[\ce{B}]^n
+\end{align*}
+We can also write the value for $K_{eq}$ to be 
+\begin{align*}
+\frac{k_f}{k_r} = \frac{[\ce{B}]^n}{[\ce{A}]^m} = K_{eq}
+\end{align*} 
+
+\end{document}

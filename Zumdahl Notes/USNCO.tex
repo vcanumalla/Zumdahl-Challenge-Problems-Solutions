@@ -1,0 +1,69 @@
+\documentclass[9pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage[version =4]{mhchem}
+\usepackage[paperheight = 3in, paperwidth = 5in, margin = 0.20in, top = 0.6in]{geometry}
+\pagestyle{fancy}
+\usepackage{pgf}
+\usepackage{pgfpages}
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=\pgfphysicalwidth,%
+    resized height=\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+\begin{document}
+
+
+
+% \cardfrontstyle[\large\slshape]{headings}
+% \cardbackstyle{empty}
+\begin{center}
+    \hspace{0pt}
+    \vfill
+    \Large USNCO Flashcards
+    \vfill
+    \hspace{0pt}
+\end{center}
+% \cardfrontfoot{Atomic Theory}
+\newpage
+
+\lhead{Solubility Rules}
+Any of the following implies the salt is soluble
+\begin{itemize}
+    \item All group 1A and \ce{NH4+} salts
+    \item All compounds which contain cations \ce{NO3-, ClO4-, ClO3-, CH3COO-}
+    \item All \ce{Cl-}, \ce{Br-}, \ce{I-} except paired with \ce{Ag+}, \ce{Pb^2+}, \ce{Hg_2^2+}
+    \item All \ce{SO4^2-} except paired with \ce{Ag+}, \ce{Pb^2+}, \ce{Hg_2^2+}, \ce{Ca^2+}, \ce{Sr^2+}, \ce{Ba^2+}
+\end{itemize}
+\newpage
+Any of the following implies an insoluble salt
+\begin{itemize}
+    \item All \ce{OH-} are insoluble \textbf{except} when paired with Group 1A, \ce{NH4+}, \ce{Ca^2+}, \ce{Ba^2+}, \ce{Sr^2+}
+    \item All \ce{CO3-}, \ce{S^2-}, \ce{PO4^3-}, \ce{SO3^2-} are insoluble barring group 1 and \ce{NH4+}
+    \item Insoluble \ce{CO3-} salts include
+    \begin{itemize}
+        \item \ce{CaCO3}, \ce{SrCO3}, \ce{BaCO3}, \ce{FeCO3}, \ce{PbCO3}
+    \end{itemize}
+    \item Insoluble \ce{PO4^3-} salts include
+    \begin{itemize}
+        \item \ce{Ca3(PO4)2}, \ce{Ag3PO4}
+    \end{itemize}
+\end{itemize}
+
+\end{document}
